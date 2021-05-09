@@ -40,7 +40,7 @@ export default {
       try {
         const authCode = await this.$gAuth.getAuthCode()
         console.log(authCode)
-        const token = await this.axios.post('http://localhost:3000/google/login',
+        const token = await this.axios.post(`${process.env.VUE_APP_BASE_URL}/google/login`,
           { 
             authCode: authCode,
             redirect_uri: 'postmessage' 

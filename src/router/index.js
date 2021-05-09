@@ -7,7 +7,8 @@ import Store from '@/store/index.js'
 //views
 import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
-import StudentManageClasses from '../views/StudentManageClasses.vue'
+import ManageClasses from '../views/ManageClasses.vue'
+import Settings from '../views/Settings.vue'
 
 Vue.use(VueRouter)
 
@@ -25,7 +26,13 @@ const routes = [
   {
     path: '/classes',
     name: 'Classes',
-    component: StudentManageClasses,
+    component: ManageClasses,
+    meta: { requiresAuth: true }
+  },
+  {
+    path: '/settings',
+    name: 'Settings',
+    component: Settings,
     meta: { requiresAuth: true }
   }
 ]

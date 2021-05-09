@@ -15,7 +15,7 @@ export default {
       try {
         const authCode = await this.$gAuth.getAuthCode()
         console.log(authCode)
-        const token = await this.axios.post('http://localhost:3000/google/login',
+        const token = await this.axios.post(`${process.env.VUE_APP_BASE_URL}/google/login`,
           { 
             authCode: authCode,
             redirect_uri: 'postmessage' 
@@ -29,7 +29,7 @@ export default {
     },
     async handleSignOut () {
       try {
-        await this.axios.get('http://localhost:3000/google/logout',
+        await this.axios.get(`${process.env.VUE_APP_BASE_URL}/google/logout`,
           {
             headers: {
               'Authorization': `Bearer ${this.$store.state.jwt_token}`

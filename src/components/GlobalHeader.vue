@@ -11,6 +11,17 @@
           elevation="1"
           @click.prevent="handleSignOut"
         >ログアウト</v-btn>
+        <v-btn
+          class="ml-4"
+          elevation="0"
+          fab
+          small
+          to="/settings"
+        >
+          <v-icon dark>
+            mdi-cog
+          </v-icon>
+        </v-btn>
       </v-app-bar>
     </header>
   </div>
