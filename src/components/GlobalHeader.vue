@@ -33,7 +33,7 @@ export default {
   methods: {
     async handleSignOut () {
       try {
-        await this.axios.get('http://localhost:3000/google/logout',
+        await this.axios.get(`${VUE_APP_BASE_URL}/google/logout`,
           {
             headers: {
               'Authorization': `Bearer ${this.$store.state.jwt_token}`
