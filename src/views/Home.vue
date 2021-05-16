@@ -23,6 +23,7 @@
             elevation="5"
             @click.prevent="handleSignIn"
             v-if="!Object.keys($store.state.jwt_token).length"
+            :loading="loading"
           >ログイン/新規登録</v-btn>
         </div>
       <p class="mt-3"></p>
@@ -44,10 +45,12 @@ export default {
   data: () => ({
     alert: false,
     alertmessage: "",
+    loading: false
   }),
   methods: {
     async handleSignIn () {
       try {
+        this.loading = true
         const authCode = await this.$gAuth.getAuthCode()
         console.log(authCode)
         const token = await this.axios.post(`${process.env.VUE_APP_BASE_URL}/google/login`,
@@ -57,6 +60,7 @@ export default {
           })
         this.$store.commit('update_jwt_token', token.data.tokens)
         console.log(token.data.tokens)
+        this.loading = false
         this.$router.push(this.$route.query.redirect || '/classes').catch(error => {
               console.log(error)
               this.alert = true
