@@ -13,6 +13,15 @@
       >
         {{ `エラーが発生しました。\n${alertmessage}` }}
       </v-alert>
+      <v-btn
+          class="ma-5"
+          color="primary"
+          elevation="2"
+          outlined
+          to="/classes"
+      >
+        戻る
+      </v-btn>
       <v-card class="ma-3">
         <v-card-title class="ma-5">
           登録情報の削除
