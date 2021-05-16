@@ -12,7 +12,7 @@
         type="error"
         v-if="alert"
       >
-        {{ alertmessage }}  
+        {{ `エラーが発生しました。\n${alertmessage}` }}  
       </v-alert>
       <p class="mt-3">ログインしてください。</p>
       <v-btn

@@ -11,7 +11,7 @@
         type="error"
         v-if="alert"
       >
-        {{ alertmessage }}  
+        {{ `エラーが発生しました。\n${alertmessage}` }}  
       </v-alert>
       <v-card>
         <v-data-table

@@ -11,7 +11,7 @@
         type="error"
         v-if="alert"
       >
-        {{ alertmessage }}  
+        {{ `エラーが発生しました。\n${alertmessage}` }}
       </v-alert>
       <v-card class="ma-3">
         <v-card-title class="ma-5">
@@ -25,6 +25,8 @@
                   color="red"
                   elevation="2"
                   outlined
+                  :loading="loading"
+                  @click.prevent="deleteAccount"
                 >
                   アカウントを削除
                 </v-btn>
@@ -44,11 +46,38 @@ export default {
     GlobalHeader,
   },
   data: () => ({
+    loading: false,
     alert: false,
     alertmessage: "",
   }),
   methods: {
-
+    async deleteAccount () {
+      try {
+        this.loading = true
+        await this.axios.delete(`${process.env.VUE_APP_API_BASE_URL}/deleteaccount`,
+          {
+            headers: {
+              'Authorization': `Bearer ${this.$store.state.jwt_token}`
+            }
+          })
+        
+      } catch (error) {
+        console.error(error)
+      }finally{
+        this.loading = false
+        this.$store.commit('update_jwt_token', {})
+        this.$router.push('/').catch(error => {
+          console.log(error)
+          this.alert = true
+          this.alertmessage = 'エラーが発生しました。しばらくしてから再読み込みをしてください。'
+          this.loading = false
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          })
+        })
+      }
+    }
   }
 }
 </script>

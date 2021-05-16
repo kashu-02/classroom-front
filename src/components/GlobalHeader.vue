@@ -12,6 +12,7 @@
           @click.prevent="handleSignOut"
         >ログアウト</v-btn>
         <v-btn
+          v-if="Object.keys($store.state.jwt_token).length"
           class="ml-4"
           elevation="0"
           fab
