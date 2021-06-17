@@ -44,15 +44,20 @@
         </v-container>
       </v-card>
     </v-main> 
+    <global-footer />
   </div>
 </template>
 
 <script>
-import GlobalHeader from "../components/GlobalHeader.vue";
+
+
+import GlobalHeader from "../components/GlobalHeader.vue"
+import GlobalFooter from "../components/GlovalFooter.vue"
 
 export default {
   components: {
-    GlobalHeader,
+    'global-header': GlobalHeader,
+    'global-footer': GlobalFooter
   },
   data: () => ({
     loading: false,

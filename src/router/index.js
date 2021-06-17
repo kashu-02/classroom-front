@@ -9,6 +9,8 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import ManageClasses from '../views/ManageClasses.vue'
 import Settings from '../views/Settings.vue'
+import TermsofUse from '../views/TermsofUse'
+import PrivacyPolicy from '../views/PrivacyPolicy'
 
 Vue.use(VueRouter)
 
@@ -34,6 +36,16 @@ const routes = [
     name: 'Settings',
     component: Settings,
     meta: { requiresAuth: true }
+  },
+  {
+    path: '/termsofuse',
+    name: 'TermsofUse',
+    component: TermsofUse
+  },
+  {
+    path: '/privacypolicy',
+    name: 'PrivacyPolicy',
+    component: PrivacyPolicy
   }
 ]
 

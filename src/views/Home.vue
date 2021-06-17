@@ -28,24 +28,36 @@
         </div>
       <p class="mt-3"></p>
       </v-card>
-      <v-card class="ma-3">
+      <v-card class="ma-3" elevation="0">
         <h1>Classroom-Notifier</h1>
         <br>
         <h2>Classroom-Notifierとは</h2>
-        <p></p>
+        <p>登録したclassroomのお知らせの投稿をすべてメールで送信します。<br>生徒が作成したお知らせや、お知らせを編集した場合でも通知をするので部活動の連絡や常に最新の情報を確認したい方におすすめです。</p>
+        <h2>注意事項</h2>
+        <p>
+          「ログイン/新規登録」をすることにより、利用規約に同意したこととします。
+           メール送信先のアドレスはGoogleアカウントのメールアドレスです。
+        </p>
+        <h2>利用方法</h2>
+        <p>①「ログイン/新規登録」をクリック(タップ)して、Google Classroom の登録が完了しているGoogleアカウントでログインします。</p>
+        <p>②メール送信を希望するクラスの「登録」をタップします。</p>
+        <p>③登録が完了すると、登録完了のメールが送信されます。</p>
       </v-card>
-    </v-main> 
+    </v-main>
+    <global-footer />
   </div>
 </template>
 
 <script>
 
 
-import GlobalHeader from "../components/GlobalHeader.vue";
+import GlobalHeader from "../components/GlobalHeader.vue"
+import GlobalFooter from "../components/GlovalFooter.vue"
 
 export default {
   components: {
-    GlobalHeader,
+    'global-header': GlobalHeader,
+    'global-footer': GlobalFooter
   },
   data: () => ({
     alert: false,
