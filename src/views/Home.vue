@@ -28,7 +28,12 @@
         </div>
       <p class="mt-3"></p>
       </v-card>
-      
+      <v-card class="ma-3">
+        <h1>Classroom-Notifier</h1>
+        <br>
+        <h2>Classroom-Notifierとは</h2>
+        <p></p>
+      </v-card>
     </v-main> 
   </div>
 </template>

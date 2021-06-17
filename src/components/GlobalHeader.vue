@@ -1,8 +1,8 @@
 <template>
   <div>
     <header>
-      <v-app-bar>
-        <v-app-bar-title>
+      <v-app-bar dense>
+        <v-app-bar-title class="text-no-wrap">
           Classroom-Notifier
         </v-app-bar-title>
         <v-spacer></v-spacer>
