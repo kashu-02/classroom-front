@@ -52,7 +52,7 @@
 
 
 import GlobalHeader from "../components/GlobalHeader.vue"
-import GlobalFooter from "../components/GlovalFooter.vue"
+import GlobalFooter from "../components/GlobalFooter.vue"
 
 export default {
   components: {
