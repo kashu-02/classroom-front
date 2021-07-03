@@ -3,7 +3,7 @@
     <header>
       <v-app-bar dense>
         <v-app-bar-title class="text-no-wrap">
-          Classroom-Notifier
+          Classroom Notifier
         </v-app-bar-title>
         <v-spacer></v-spacer>
         <v-btn

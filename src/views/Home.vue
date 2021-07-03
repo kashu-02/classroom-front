@@ -29,9 +29,9 @@
       <p class="mt-3"></p>
       </v-card>
       <v-card class="ma-3" elevation="0">
-        <h1>Classroom-Notifier</h1>
+        <h1>Classroom Notifier</h1>
         <br>
-        <h2>Classroom-Notifierとは</h2>
+        <h2>Classroom Notifierとは</h2>
         <p>登録したclassroomのお知らせの投稿をすべてメールで送信します。<br>生徒が作成したお知らせや、お知らせを編集した場合でも通知をするので部活動の連絡や常に最新の情報を確認したい方におすすめです。</p>
         <h2>注意事項</h2>
         <p>
@@ -90,6 +90,7 @@ export default {
         })
       } catch (error) {
         console.error(error)
+        this.loading = false
         return null
       }
     },
