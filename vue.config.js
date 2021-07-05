@@ -2,7 +2,7 @@ module.exports = {
   "pages": {
     "index": {
       "entry": "src/main.js",
-      "title": "Clasroom-Notifier"
+      "title": "Clasroom Notifier"
     }
   },
   "transpileDependencies": [
