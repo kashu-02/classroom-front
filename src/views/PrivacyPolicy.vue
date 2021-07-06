@@ -12,8 +12,8 @@
         戻る
       </v-btn>
       <v-card class="ma-3" elevation="0">
-        <h1>Classroom-Notifier プライバシーポリシー</h1>
-        <p>kashu（以下「当方」という）は、当方の提供する Classroom-Notifier の利用者（以下「ユーザー」という）に関する個人情報を含んだ情報（以下「ユーザー情報」という）の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」という）を定めます。</p>
+        <h1>Classroom Notifier プライバシーポリシー</h1>
+        <p>kashu（以下「当方」という）は、当方の提供する Classroom Notifier の利用者（以下「ユーザー」という）に関する個人情報を含んだ情報（以下「ユーザー情報」という）の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」という）を定めます。</p>
         <h2>１．情報を取得するアプリ提供者</h2>
         <a href="https://github.com/kashu-02" target="_blank" rel="noopener noreferrer">kashu</a> 
         <h2>２．取得するユーザー情報と目的</h2>
