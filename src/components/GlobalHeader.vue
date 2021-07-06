@@ -39,11 +39,11 @@ export default {
               'Authorization': `Bearer ${this.$store.state.jwt_token}`
             }
           })
-        window.location.href = '/'
       } catch (error) {
         console.error(error)
       }finally{
         this.$store.commit('update_jwt_token', {})
+        window.location.href = '/'
       }
     }
   }

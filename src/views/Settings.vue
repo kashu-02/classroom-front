@@ -74,11 +74,7 @@ export default {
               'Authorization': `Bearer ${this.$store.state.jwt_token}`
             }
           })
-        
-      } catch (error) {
-        console.error(error)
-      }finally{
-        this.loading = false
+                this.loading = false
         this.$store.commit('update_jwt_token', {})
         this.$router.push('/').catch(error => {
           console.log(error)
@@ -89,6 +85,17 @@ export default {
             top: 0,
             behavior: "smooth"
           })
+        })
+        
+      } catch (error) {
+        console.error(error)
+        this.loading = false
+        this.alert = true
+        this.alertmessage = 'トークン有効期限切れです。再度ログインしてください。'
+        this.loading = false
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
         })
       }
     }
