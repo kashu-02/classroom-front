@@ -8,7 +8,7 @@ import VueAxios from 'vue-axios'
 import GAuth from 'vue-google-oauth2'
 const gauthOption = {
   clientId: '426200871833-p67l34fapm4ed35naceutp9go7tgvrlb.apps.googleusercontent.com',
-  scope: 'profile email https://www.googleapis.com/auth/classroom.announcements.readonly https://www.googleapis.com/auth/classroom.courses.readonly https://www.googleapis.com/auth/classroom.rosters.readonly ',
+  scope: 'profile email https://www.googleapis.com/auth/classroom.announcements.readonly https://www.googleapis.com/auth/classroom.courses.readonly https://www.googleapis.com/auth/classroom.rosters.readonly https://www.googleapis.com/auth/classroom.profile.emails https://www.googleapis.com/auth/classroom.profile.photos',
   prompt: 'consent'
 }
 
