@@ -1,7 +1,7 @@
 # 【Frontend】Classroom-Notifier  - Notify all postings in the Google Classroom.
 
 This repository is a frontend service of Classroom-Notifier.
-Backend repository is here. (https://github.com/kashu-02/classroom)
+Backend repository is here. (https://github.com/kashu-02/classroom-notifier)
 
 ## Project setup
 ```
